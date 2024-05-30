@@ -1,0 +1,21 @@
+//to check the array is travesrd or not
+/* w.k.t the traversal is ntg but if the preveious nuber is smalller than or equal to current element*/
+#include <iostream>
+using namespace std;
+bool isSorted(int arr[],int n){
+    for(int i=1;i<n;i++){
+        if(arr[i]<arr[i-1])
+        return false;
+    }
+    return true;
+}
+
+int main()
+{
+    int arr[]={1,2,3,4,5,6,7};
+    int n=6;
+   printf("%s", isSorted(arr, n) ? "True" : "False");
+
+    
+    return 0;
+}
