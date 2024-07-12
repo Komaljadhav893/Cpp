@@ -1,0 +1,48 @@
+int main()
+{
+    string userChoice;
+    string computerChoice;
+    
+    cout<<"eEnter input(rok ,paper ,scissor):";
+    cin>>userChoice;
+    
+    
+    //for computers input
+    srand(time(0));
+    int randomInt=rand()%3;
+    switch(randomInt){
+        case 0:
+            computerChoice = "rock";
+            break;
+        case 1:
+            computerChoice = "paper";
+            break;
+        case 2:
+            computerChoice = "scissor";
+            break;    
+
+    }
+    
+    if (userChoice != "rock" && userChoice != "paper" && userChoice != "scissor") {
+        cout << "Invalid input. Please enter rock, paper, or scissor." << endl;
+        return 1; // exit with error code
+    }
+    
+    
+    
+    if(userChoice==computerChoice){
+        cout<<"its tie ";
+    }
+    //main logic to build this game
+    else if(computerChoice=="rock" && userChoice=="paper" 
+    ||computerChoice=="scissor" && userChoice=="rock"
+    ||computerChoice=="paper" && userChoice=="scissor"){
+        
+        cout<<"you won the game !";
+    }
+   
+    
+    else{
+        cout<<"computer won !!";
+    }
+    
